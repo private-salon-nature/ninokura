@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元気なあなたに還る整体 in NINOKURA 〜Final〜</title>
+    <meta name="description" content="埼玉県本庄市の醤油蔵を改装したカフェNINOKURAで開催される、理学療法士による特別な整体イベント。身体・心・エネルギーを整える最終回のご案内。">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Serif JP (高級感のある明朝体), Noto Sans JP (可読性の高いゴシック) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-beige': '#f9f7f2',
+                        'sage-green': '#8da399',
+                        'warm-gray': '#555555',
+                        'accent-gold': '#bfa67a',
+                        'dark-olive': '#3d4a44',
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            color: #444; 
+            background-color: #f9f7f2; 
+            overflow-x: hidden; 
+            line-height: 1.8;
+        }
+        h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
+        
+        /* Reveal Animation */
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); 
+        }
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        
+        /* Parallax & Backgrounds */
+        .bg-kura { 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                              url('https://images.unsplash.com/photo-1590732487810-ac32177c432d?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Smooth interactions */
+        .btn-hover { transition: all 0.3s ease; }
+        .btn-hover:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); }
+        
+        /* Text selection */
+        ::selection { background-color: #8da399; color: white; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: none; opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body class="bg-soft-beige selection:bg-sage-green selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-sage-green/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-serif tracking-widest font-bold text-sage-green">NINOKURA 〜Final〜</div>
+            <div class="flex items-center gap-6">
+                <a href="#contact" class="hidden md:block bg-sage-green text-white px-8 py-2.5 rounded-full text-sm font-medium btn-hover">予約・お問い合わせ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=1600" alt="Healing atmosphere" class="w-full h-full object-cover scale-105">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 text-white w-full">
+            <span class="inline-block mb-6 text-white tracking-[0.4em] font-medium reveal uppercase text-sm md:text-base">埼玉県本庄市・醤油蔵の静寂で</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-10 reveal whitespace-nowrap" style="transition-delay: 0.2s;">
+                「元気なあなた」に還る。
+            </h1>
+            <p class="text-base md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto text-white/90 leading-relaxed font-light reveal" style="transition-delay: 0.4s;">
+                定期開催の最終回。<br>歴史が息づくNINOKURAで受ける、至福の20分。
+            </p>
+            <div class="reveal" style="transition-delay: 0.6s;">
+                <a href="#contact" class="inline-block bg-accent-gold text-white px-12 py-5 rounded-full text-lg font-bold shadow-2xl shadow-accent-gold/40 btn-hover">施術体験を予約する</a>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
+            <div class="w-px h-16 bg-white mx-auto"></div>
+        </div>
+    </header>
+
+    <!-- Section 1: Final Message -->
+    <section class="py-24 md:py-40 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 reveal leading-snug">蔵の香りと静寂。<br>この場所での、最後のご案内。</h2>
+            <div class="text-lg md:text-xl leading-[2.2] text-warm-gray space-y-10 reveal">
+                <p>
+                    埼玉県本庄市の醤油蔵を改装したカフェ「NINOKURA」。<br>
+                    明治の面影を残す重厚な梁と、静かに流れる空気。
+                </p>
+                <p>
+                    この独特の安らぎの中で、身体と心を紐解いてきた本イベントも、<br>
+                    いよいよ今回で最終回を迎えることとなりました。
+                </p>
+                <p class="font-serif text-dark-olive text-2xl">
+                    最後だからこそ、より深く、より丁寧に。
+                </p>
+                <p>
+                    あなたが本来持っている、澱みのない「元気」を取り戻す。<br>
+                    その最初で最後のひとときを、心を込めてお届けします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Problem -->
+    <section class="py-24 md:py-32 bg-soft-beige">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal order-2 lg:order-1">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1200" alt="Inner Peace" class="rounded-3xl shadow-2xl relative z-10">
+                        <div class="absolute -top-6 -left-6 w-full h-full border-2 border-sage-green/30 rounded-3xl z-0"></div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-10 reveal leading-tight">その「重さ」、<br>もう手放しませんか？</h2>
+                    <div class="space-y-8 text-lg text-warm-gray reveal">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded-full bg-sage-green/10 flex items-center justify-center text-sage-green flex-shrink-0 mt-1">✓</span>
+                            <p>どこに行っても良くならない、長年の不調に悩んでいる</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded-full bg-sage-green/10 flex items-center justify-center text-sage-green flex-shrink-0 mt-1">✓</span>
+                            <p>寝ても取れない、身体の芯に居座るようなダルさがある</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded-full bg-sage-green/10 flex items-center justify-center text-sage-green flex-shrink-0 mt-1">✓</span>
+                            <p>理由のない不安や、精神的な疲れが抜けない</p>
+                        </div>
+                    </div>
+                    <p class="mt-12 text-sage-green font-bold text-xl md:text-2xl leading-relaxed reveal">
+                        それらは、あなた自身の内側からの<br>「還りたい」というサインかもしれません。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Strengths -->
+    <section class="py-24 md:py-40 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 reveal">選ばれる3つの理由</h2>
+                <p class="text-sage-green tracking-widest font-serif reveal">Reason</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group p-10 rounded-3xl bg-soft-beige border border-transparent hover:border-sage-green/20 transition-all duration-500 reveal" style="transition-delay: 0.1s;">
+                    <div class="w-20 h-20 bg-white text-sage-green rounded-2xl flex items-center justify-center mb-8 text-3xl font-serif shadow-sm group-hover:scale-110 transition-transform">01</div>
+                    <h3 class="text-2xl font-bold mb-6">国家資格の信頼</h3>
+                    <p class="text-warm-gray leading-loose">医療系国家資格「理学療法士」を保有。医学的知見に基づき、身体のメカニズムを正しく評価・分析します。</p>
+                </div>
+                <div class="group p-10 rounded-3xl bg-soft-beige border border-transparent hover:border-sage-green/20 transition-all duration-500 reveal" style="transition-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-white text-sage-green rounded-2xl flex items-center justify-center mb-8 text-3xl font-serif shadow-sm group-hover:scale-110 transition-transform">02</div>
+                    <h3 class="text-2xl font-bold mb-6">多角的な整え</h3>
+                    <p class="text-warm-gray leading-loose">筋肉や骨格の調整だけでなく、精神面や「目に見えないエネルギー」まで。多次元的な視点で不調の核へアプローチします。</p>
+                </div>
+                <div class="group p-10 rounded-3xl bg-soft-beige border border-transparent hover:border-sage-green/20 transition-all duration-500 reveal" style="transition-delay: 0.3s;">
+                    <div class="w-20 h-20 bg-white text-sage-green rounded-2xl flex items-center justify-center mb-8 text-3xl font-serif shadow-sm group-hover:scale-110 transition-transform">03</div>
+                    <h3 class="text-2xl font-bold mb-6">蔵の非日常空間</h3>
+                    <p class="text-warm-gray leading-loose">明治時代からの歴史を刻む醤油蔵「NINOKURA」。その静寂と木の温もりが、深いリラックスと変容をサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Flow -->
+    <section class="py-24 md:py-32 bg-sage-green/5">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-20 reveal">20分間の施術体験フロー</h2>
+            <div class="relative">
+                <!-- Vertical Line for desktop -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-sage-green/20 -translate-x-1/2"></div>
+                
+                <div class="space-y-16 relative">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 reveal">
+                        <div class="md:w-1/2 md:text-right">
+                            <h4 class="text-2xl font-bold text-dark-olive mb-2">01. 簡易カウンセリング</h4>
+                            <p class="text-warm-gray">現在のお悩み、なりたい状態を優しくお聞きします。</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-sage-green text-white flex items-center justify-center z-10 shrink-0 shadow-lg">1</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal">
+                        <div class="md:w-1/2 md:text-left">
+                            <h4 class="text-2xl font-bold text-dark-olive mb-2">02. 評価</h4>
+                            <p class="text-warm-gray">身体の歪みやエネルギーの滞りをプロの視点で評価します。</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-sage-green text-white flex items-center justify-center z-10 shrink-0 shadow-lg">2</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                    <!-- Step 3 (Main) -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 reveal">
+                        <div class="md:w-1/2 md:text-right">
+                            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl inline-block border-l-4 border-accent-gold">
+                                <h4 class="text-2xl md:text-3xl font-bold text-accent-gold mb-2">03. 施術体験</h4>
+                                <p class="text-warm-gray">身体・心・エネルギーを多角的に整える集中ケア。</p>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 rounded-full bg-accent-gold text-white flex items-center justify-center z-10 shrink-0 shadow-xl text-lg font-bold">3</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal">
+                        <div class="md:w-1/2 md:text-left">
+                            <h4 class="text-2xl font-bold text-dark-olive mb-2">04. 再評価とアドバイス</h4>
+                            <p class="text-warm-gray">変化を共に確認し、日常でできるセルフケアをご提案します。</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-sage-green text-white flex items-center justify-center z-10 shrink-0 shadow-lg">4</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Schedule -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 reveal">開催日程・予約状況</h2>
+            <div class="bg-soft-beige rounded-[2rem] p-8 md:p-12 reveal shadow-sm border border-sage-green/10">
+                <div class="text-center mb-10">
+                    <p class="text-sage-green font-bold tracking-widest mb-2 text-sm">DATE</p>
+                    <p class="text-3xl md:text-4xl font-bold font-serif">2月8日（日）</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                    <!-- Slot 11:00 -->
+                    <div class="flex justify-between items-center p-5 bg-white rounded-2xl border border-sage-green/20">
+                        <span class="font-bold text-lg">11:00 〜 11:20</span>
+                        <span class="px-4 py-1 rounded-full bg-sage-green/10 text-sage-green text-xs font-bold">受付中</span>
+                    </div>
+                    <!-- Slot 11:30 -->
+                    <div class="flex justify-between items-center p-5 bg-white rounded-2xl border border-sage-green/20">
+                        <span class="font-bold text-lg">11:30 〜 11:50</span>
+                        <span class="px-4 py-1 rounded-full bg-sage-green/10 text-sage-green text-xs font-bold">受付中</span>
+                    </div>
+                    <!-- Slot 12:00 (Booked) -->
+                    <div class="flex justify-between items-center p-5 bg-gray-100/50 rounded-2xl border border-gray-200 opacity-60">
+                        <span class="font-bold text-lg text-gray-400">12:00 〜 12:20</span>
+                        <span class="px-4 py-1 rounded-full bg-gray-200 text-gray-400 text-xs font-bold">受付不可</span>
+                    </div>
+                    <!-- Slot 12:30 (Booked) -->
+                    <div class="flex justify-between items-center p-5 bg-gray-100/50 rounded-2xl border border-gray-200 opacity-60">
+                        <span class="font-bold text-lg text-gray-400">12:30 〜 12:50</span>
+                        <span class="px-4 py-1 rounded-full bg-gray-200 text-gray-400 text-xs font-bold">受付不可</span>
+                    </div>
+                </div>
+                
+                <p class="text-center mt-10 text-warm-gray text-sm">
+                    ※カウンセリングから施術、アドバイスまでを含めた20分間の体験となります。<br class="hidden md:block">
+                    最終回のため、お早めのご予約をお勧めいたします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-32 md:py-48 bg-kura relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="bg-white/95 backdrop-blur-md p-10 md:p-24 rounded-[3rem] shadow-2xl reveal">
+                <span class="inline-block px-4 py-1 rounded-full bg-sage-green/10 text-sage-green font-bold text-sm mb-6 tracking-widest uppercase">The Last Chance</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">最後の一枠が、<br>本来のあなたへの入り口。</h2>
+                <p class="text-lg md:text-xl text-warm-gray mb-12 leading-loose">
+                    ご予約はInstagramのDM、または公式LINEより承っております。<br class="hidden md:block">
+                    「NINOKURA予約希望」と一言添えてメッセージをお送りください。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="https://www.instagram.com/s.daisuke_nature?igsh=eTQyNmU5dXhuYTBh&utm_source=qr" target="_blank" class="w-full sm:w-auto bg-black text-white px-10 py-5 rounded-full font-bold flex items-center justify-center gap-3 btn-hover">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagramで予約
+                    </a>
+                    <a href="https://lin.ee/yBzpFg0" target="_blank" class="w-full sm:w-auto bg-[#06C755] text-white px-10 py-5 rounded-full font-bold flex items-center justify-center gap-3 btn-hover">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.523 0 10 3.905 10 8.722 0 4.307-3.535 7.944-8.32 8.604-.323.044-.759.214-.87.545-.101.301-.065.772-.032 1.077l.126.962c.038.288.181 1.129-.785.616-1.129-.599-6.095-3.585-8.312-6.142C1.652 14.162 1 12.38 1 10.722 1 5.905 5.477 2 12 2z"/></svg>
+                        公式LINEで予約
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Access / Venue Info -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 reveal">会場案内</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start reveal">
+                <!-- Venue Details -->
+                <div class="space-y-8">
+                    <div class="border-b border-sage-green/20 pb-6">
+                        <h3 class="text-2xl font-bold text-sage-green mb-4">cafe NINOKURA（カフェ ニノクラ）</h3>
+                        <p class="text-warm-gray leading-loose">
+                            明治時代に建てられた醤油蔵をリノベーションした、歴史とモダンが融合するカフェ空間。高い天井と太い梁が醸し出す開放感の中で、心ゆくまでリラックスしていただけます。
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <span class="font-bold text-dark-olive w-24 shrink-0">住所</span>
+                            <p class="text-warm-gray">〒367-0054 埼玉県本庄市千代田4−2−4</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="font-bold text-dark-olive w-24 shrink-0">アクセス</span>
+                            <p class="text-warm-gray">JR高崎線「本庄駅」北口より徒歩約20分</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="font-bold text-dark-olive w-24 shrink-0">駐車場</span>
+                            <p class="text-warm-gray">あり</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Embed -->
+                <div class="w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-soft-beige">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.0368146603584!2d139.1774438762292!3d36.242308000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ed4440590892f%3A0xddd89656919b462e!2zTklOT0tVUkEg44Gr44Gu44GP44KJ!5e0!3m2!1sja!2sjp!4v1715053456789!5m2!1sja!2sjp" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-soft-beige text-center border-t border-sage-green/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="font-serif text-sage-green text-3xl mb-4 italic tracking-widest">元気な自分へと還る整体 in NINOKURA</h3>
+            <p class="text-sm text-warm-gray mb-10 tracking-[0.2em] uppercase">at NINOKURA Cafe, Honjo City, Saitama</p>
+            <div class="w-12 h-px bg-sage-green/30 mx-auto mb-10"></div>
+            <p class="text-xs text-warm-gray/40 tracking-[0.3em]">© 2024 元気なあなたに還る整体. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Reveal Script -->
+    <script>
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('http')) {
+                    // Let the default behavior handle external links
+                    return;
+                }
+                
+                e.preventDefault();
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
